@@ -1,0 +1,31 @@
+# Maven target folder
+target/
+
+# Eclipse specific files
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IntelliJ / VS Code
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Build artifacts
+*.jar
+*.war
+
+# Test reports
+test-output/
+surefire-reports/
