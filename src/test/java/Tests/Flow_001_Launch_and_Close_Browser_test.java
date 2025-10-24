@@ -7,7 +7,7 @@ import Lib.uihelper;
 public class Flow_001_Launch_and_Close_Browser_test {
 	
 	@Test
-	public static void main(String[] args) {
+	public void launchAndCloseBrowser() {
 			
 		uihelper.launchUrl("https://www.google.com ");
 		uihelper.closer();
