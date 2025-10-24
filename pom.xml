@@ -65,6 +65,7 @@
                 <configuration>
                     <includes>
                         <include>**/Tests/*.java</include>
+                        <include>**/*test.java</include>
                     </includes>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
