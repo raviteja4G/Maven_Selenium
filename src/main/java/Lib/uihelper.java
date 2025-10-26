@@ -2,10 +2,26 @@ package Lib;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class uihelper {
 	
-static WebDriver  driver = new ChromeDriver();
+	static WebDriver driver;
+
+	static {
+	    ChromeOptions options = new ChromeOptions();
+	
+	    // Read headless property from Jenkins (or pom)
+	    if ("true".equalsIgnoreCase(System.getProperty("headless"))) {
+	        options.addArguments("--headless=new");
+	        options.addArguments("--no-sandbox");
+	        options.addArguments("--disable-dev-shm-usage");
+	        options.addArguments("--remote-allow-origins=*");
+	        options.addArguments("--window-size=1920,1080");
+	    }
+	
+	    driver = new ChromeDriver(options);
+	}
 	
 	//************* Luaunching the Browser (Url) ************************
 	public static void launchUrl(String url, String expectedBrowserTitle) {
