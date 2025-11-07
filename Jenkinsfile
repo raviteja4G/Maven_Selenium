@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/raviteja4G/selenium_Project.git'
+                git branch: 'main', url: 'https://github.com/raviteja4G/Maven_Selenium.git'
             }
         }
         stage('Build') {
