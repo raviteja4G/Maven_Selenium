@@ -9,8 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean install'
-            }
+        sh '''
+        pkill chrome || true
+        pkill chromedriver || true
+        mvn clean test
+        '''
+    }
         }
         stage('Test') {
             steps {
